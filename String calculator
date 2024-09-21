@@ -20,8 +20,13 @@ int main()
 {
    cout << "Starting the test suite" << endl;
    
+   assert(calculator("0") == 0);
+   assert(calculator("1") == 1);
+   assert(calculator("") == 0);
    assert(calculator("4,3,2,1") == 10);
-   
+   assert(calculator("5;8,1") == 14);
+   assert(calculator("3;6;7;5;3;2;4;0") == 30);
+  
    
    cout << "All of the tests passed" << endl;
    return 0;
